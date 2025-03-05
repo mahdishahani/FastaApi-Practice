@@ -44,3 +44,174 @@ logs/
 
 .pre-commit-config.yaml
 .flake8
+
+
+# Django #
+*.log
+*.pot
+*.pyc
+__pycache__
+db.sqlite3
+
+#  Media
+media/*
+!/media/defaults/
+
+static
+data
+
+# *.csv
+*.xlsx
+# Backup files #
+*.bak
+
+# If you are using PyCharm #
+# User-specific stuff
+.idea
+
+
+# File-based project format
+*.iws
+
+# IntelliJ
+out/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Python #
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# celery
+celerybeat-schedule.*
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+
+# Sublime Text #
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+
+# sftp configuration file
+sftp-config.json
+
+# Package control specific files Package
+Control.last-run
+Control.ca-list
+Control.ca-bundle
+Control.system-ca-bundle
+GitHub.sublime-settings
+
+# Visual Studio Code #
+.vscode
+.vscode/*
+.history
+
+#/accounts/migrations/*
+#!/accounts/migrations/__init__.py
+#
+#/contest/migrations/*
+#!/contest/migrations/__init__.py
+#
+#/loyal/migrations/*
+#!/loyal/migrations/__init__.py
+#
+#/mission/migrations/*
+#!/mission/migrations/__init__.py
+#
+#/reward/migrations/*
+#!/reward/migrations/__init__.py
+#
+#/pointsystem/migrations/*
+#!/pointsystem/migrations/__init__.py
+#
+#/shop/migrations/*
+#!/shop/migrations/__init__.py
+#
+#/transaction/migrations/*
+#!/transaction/migrations/__init__.py
+#
+#/whmcs/migrations/*
+#!/whmcs/migrations/__init__.py
+#
+#/wordpress/migrations/*
+#!/wordpress/migrations/__init__.py
+#
+#/instagram/migrations/*
+#!/instagram/migrations/__init__.py
+#
+#/tiersystem/migrations/*
+#!/tiersystem/migrations/__init__.py
+#
+#/media_library/migrations/*
+#!/media_library/migrations/__init__.py
+#
+#/predefined_mission/migrations/*
+#!/predefined_mission/migrations/__init__.py
+
+themes.json
+pwa_config.json
+/config/files/*
+poetry.lock
+*.csv
+/google_files/*
