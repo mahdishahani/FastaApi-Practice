@@ -56,7 +56,7 @@ class Service(FastAPI):
             # Verify that message status is valid.
             #  TODO validate message with (field) in schema
 
-            worker = MessageResponseLogic(repository=DataOperationsRepository())
+            worker = MessageResponseLogic(repository=DataOperationsRepository(db=get_async_session()))
 
             await asyncio.create_task(worker.process_response(message))
 

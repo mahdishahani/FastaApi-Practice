@@ -3,8 +3,8 @@ from time import sleep
 
 import ujson as json
 from aio_pika import Message, connect
-from src.tools.rabbit_client import RabbitClient  # Adjust the import path as needed
-from src.config.setup import settings  # Ensure you have your RabbitMQ settings
+from src.tools.rabbit_client import RabbitClient
+from src.config.setup import settings
 
 
 async def send_test_message():
@@ -14,11 +14,24 @@ async def send_test_message():
     connection = await connect(rabbit_url)
     channel = await connection.channel()
 
-    for i in range(100):
+    for i in range(2):
         message = {
-            "metadata": {"id": "12345", "timestamp": "2025-02-25T12:00:00Z"},
-            "data": f"Test message for RabbitMQ -  - -- - -  - {i}",
-            "operation": "add_invoice"
+            "body": {
+                "content": "Hello, RabbitMQ!",
+                "type": "Hello, RabbitMQ!",
+                "data": {
+                    "customer_name": f"Customer {i}",
+                    "amount": round(100 + i * 10.5, 2),
+                    "status": "pending",
+                    "issued_at": "2025-03-29T12:00:00Z"
+                },
+            },
+            "metadata": {
+                "timestamp": "2025-03-29T12:00:00Z",
+                "sender": "test",
+                "version": "0.0.1",
+            },
+            "operation": "create_invoice"
         }
 
         message_body = Message(
